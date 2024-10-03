@@ -6,8 +6,8 @@ orbs:
 jobs:
   test-python:
     # Install dependencies and run tests
-    docker:
-      - image: cimg/python:3.8-node
+    machine: true
+    resource_class: almorgnamespace/almtest
     steps:
       - checkout
       - python/install-packages
